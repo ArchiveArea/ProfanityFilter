@@ -1,0 +1,54 @@
+{
+   "name": "nhanaz/profanityfilter",
+   "description": "Powerful Profanity Filter Plugin For PocketMine-MP Servers",
+   "type": "project",
+   "keywords": [
+      "profanityfilter",
+      "pocketmine-mp"
+   ],
+   "readme": "../README.md",
+   "homepage": "https://github.com/nhanaz-pm-pl",
+   "time": "2022-02-01 00:00",
+   "license": "GPL-3.0-only",
+   "authors": [
+        {
+            "name": "NhanAZ",
+            "email": "nhanaz@protonmail.com",
+            "homepage": "https://github.com/NhanAZ",
+            "role": "Developer"
+        }
+    ],
+   "support": {
+      "email": "nhanaz@protonmail.com",
+      "issues": "https://github.com/nhanaz-pm-pl/ProfanityFilter/issues",
+      "wiki": "https://github.com/nhanaz-pm-pl/ProfanityFilter/wiki",
+      "source": "https://github.com/nhanaz-pm-pl/ProfanityFilter",
+      "chat": "https://discord.gg/x4CrYtmWhY"
+   },
+   "funding": [
+      {
+         "type": "paypal",
+         "url": "https://www.paypal.me/nhanaz"
+      },
+      {
+         "type": "patreon",
+         "url": "https://patreon.com/nhanaz"
+      }
+   ],
+   "require": {
+      "phpstan/phpstan": "^1.4.6",
+      "pocketmine/pocketmine-mp": "^4.0.0",
+      "phpstan/phpstan-strict-rules": "^1.0",
+      "phpstan/extension-installer": "^1.0"
+   },
+   "autoload": {
+      "psr-4": {
+         "NhanAZ\\ProfanityFilter\\": "src/"
+      }
+   },
+   "config": {
+      "allow-plugins": {
+         "phpstan/extension-installer": true
+      }
+   }
+}
