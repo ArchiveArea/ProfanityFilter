@@ -1,0 +1,11 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/nhanaz-pm-pl/ProfanityFilter
+build-by-default: true
+branches:
+- master
+projects:
+  ProfanityFilter:
+    path: ""
+    icon: "assets/images/icon.png"
+    lint:
+      phpstan: false
+...
