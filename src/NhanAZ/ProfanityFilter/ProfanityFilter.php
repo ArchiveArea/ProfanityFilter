@@ -114,7 +114,7 @@ class ProfanityFilter extends PluginBase {
 	/**
 	 * getProfanities
 	 *
-	 * @return string[]
+	 * @return array<string>
 	 */
 	public function getProfanities(): array {
 		return $this->profanities->get("profanities", ["wtf", "đụ"]);
