@@ -114,9 +114,9 @@ class ProfanityFilter extends PluginBase {
 	/**
 	 * getProfanities
 	 *
-	 * @return array<string>
+	 * @return mixed
 	 */
-	public function getProfanities(): array {
+	public function getProfanities(): mixed {
 		return $this->profanities->get("profanities", ["wtf", "đụ"]);
 	}
 
@@ -156,6 +156,10 @@ class ProfanityFilter extends PluginBase {
 	 */
 	public function containsProfanity(string $msg): bool {
 		$profanities = $this->getProfanities();
+		/**
+		 * @phpstan-ignore-next-line
+		 * Argument of an invalid type mixed supplied for foreach, only iterables are supported.
+		 */
 		foreach ($profanities as $profanitie) {
 			if ((bool)strrchr(strtolower($msg), strval($profanitie))) {
 				return true;
