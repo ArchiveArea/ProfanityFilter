@@ -172,11 +172,10 @@ class ProfanityFilter extends PluginBase {
 	 * warningPlayer (Send a warning to players if their messages contain profanity)
 	 *
 	 * @param Player $player
-	 * @param string $msg
 	 *
 	 * @return void
 	 */
-	public function warningPlayer(Player $player, string $msg): void {
+	public function warningPlayer(Player $player): void {
 		if ($this->getWarningMode()) {
 			$prefix = $this->getPrefix();
 			$warningMessage = ProfanityFilter::getLanguage()->translateString("warning.message");
