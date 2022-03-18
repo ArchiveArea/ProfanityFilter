@@ -37,7 +37,7 @@ class EventListener implements Listener {
 		$player = $event->getPlayer();
 		if (!$player->hasPermission("profanityfilter.bypass")) {
 			if ($this->profanityFilter->containsProfanity($msg)) {
-				$this->profanityFilter->warningPlayer($player, $msg);
+				$this->profanityFilter->warningPlayer($player);
 				$this->profanityFilter->showProfanity($player, $msg);
 				$filteredMsg = $this->profanityFilter->handleMessage($msg);
 				$event->setMessage($filteredMsg);
