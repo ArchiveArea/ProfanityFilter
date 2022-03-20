@@ -27,7 +27,7 @@ class RemoveProfanity extends BaseSubCommand {
 	 *
 	 * @param CommandSender $sender
 	 * @param string $aliasUsed
-	 * @param array $args
+	 * @param array<string> $args
 	 *
 	 * @return void
 	 */
