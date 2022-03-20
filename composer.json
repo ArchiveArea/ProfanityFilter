@@ -6,7 +6,7 @@
       "profanityfilter",
       "pocketmine-mp"
    ],
-   "readme": "../README.md",
+   "readme": "README.md",
    "homepage": "https://github.com/nhanaz-pm-pl",
    "time": "2022-02-01 00:00",
    "license": "GPL-3.0-only",
