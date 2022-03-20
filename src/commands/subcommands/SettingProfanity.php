@@ -27,7 +27,7 @@ class SettingProfanity extends BaseSubCommand {
 	 *
 	 * @param CommandSender $sender
 	 * @param string $aliasUsed
-	 * @param array<string> $args
+	 * @param array $args
 	 *
 	 * @return void
 	 */
