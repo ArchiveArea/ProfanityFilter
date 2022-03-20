@@ -9,7 +9,9 @@ use pocketmine\player\Player;
 use pocketmine\lang\Language;
 use pocketmine\utils\TextFormat;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\SingletonTrait;
 use NhanAZ\ProfanityFilter\VersionInfo;
+use NhanAZ\ProfanityFilter\commands\ProfanityCommand;
 use function is_dir;
 use function mkdir;
 use function is_file;
@@ -26,6 +28,8 @@ use function strtolower;
  * @package NhanAZ\ProfanityFilter
  */
 class ProfanityFilter extends PluginBase {
+
+	use SingletonTrait;
 
 	/**
 	 * @var Config $config
@@ -81,6 +85,16 @@ class ProfanityFilter extends PluginBase {
 	}
 
 	/**
+	 * onLoad
+	 *
+	 * @return void
+	 */
+	protected function onLoad(): void {
+		self::setInstance($this);
+	}
+
+
+	/**
 	 * onEnable
 	 *
 	 * @return void
@@ -100,6 +114,8 @@ class ProfanityFilter extends PluginBase {
 			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
 			$this->getLogger()->warning($isDevelopmentBuild);
 		}
+
+		$this->getServer()->getCommandMap()->register("profanity", new ProfanityCommand($this, "profanity", "Profanity Command"));
 	}
 
 	/**

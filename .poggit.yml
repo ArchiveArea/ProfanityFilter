@@ -6,6 +6,10 @@ projects:
   ProfanityFilter:
     path: ""
     icon: "assets/images/icon.png"
+    libs:
+    - src: CortexPE/Commando/Commando
+      version: ^3.0.0
+      branch: PM4
     lint:
       phpstan: false
 ...

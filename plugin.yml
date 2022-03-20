@@ -12,7 +12,22 @@ extensions:
   core: ">=8.0"
 
 permissions:
+  profanityfilter:
+    description: "Profanity Command"
+    default: op
+  profanityfilter.add:
+    description: "Add Profanity"
+    default: op
+    profanityfilter.remove:
+    description: "Remove Profanity"
+    default: op
+    profanityfilter.list:
+    description: "List Profanity"
+    default: op
+    profanityfilter.setting:
+    description: "Setting Profanity"
+    default: op
   profanityfilter.bypass:
-    description: "Bypass plugin's filter!"
+    description: "Bypass plugin's filter"
     default: op
 ...
