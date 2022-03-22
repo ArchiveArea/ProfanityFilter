@@ -39,7 +39,7 @@
         "phpstan/phpstan": "1.4.10",
         "phpstan/phpstan-strict-rules": "1.1.0",
         "phpstan/extension-installer": "1.1.0",
-        "pocketmine/pocketmine-mp": "4.2.3",
+        "pocketmine/pocketmine-mp": "4.2.4",
         "cortexpe/commando": "dev-PM4"
     },
     "autoload": {
