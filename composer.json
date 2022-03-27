@@ -43,7 +43,7 @@
         "cortexpe/commando": "dev-PM4"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "NhanAZ\\ProfanityFilter\\": "src/"
         }
     },
