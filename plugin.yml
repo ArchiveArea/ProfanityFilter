@@ -3,7 +3,6 @@ name: ProfanityFilter
 version: 1.0.0
 main: NhanAZ\ProfanityFilter\ProfanityFilter
 api: 4.0.0
-src-namespace-prefix: NhanAZ\ProfanityFilter
 
 website: github.com/nhanaz-pm-pl/ProfanityFilter
 description: Powerful Profanity Filter Plugin For PocketMine-MP Servers
