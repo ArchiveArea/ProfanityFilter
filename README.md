@@ -1,3 +1,9 @@
+The project paused development for a short while because I didn't have time to develop...
+There is an important exam coming my way...
+Although I don't have time to develop the project, But i'll still review the Pull Requests as soon as possible. So don't be shy to create a Pull Request.
+
+---
+
 # ProfanityFilter
 
 <img src="assets/images/swearing.png" height="64" width="64" align="left"></img>
