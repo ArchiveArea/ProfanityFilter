@@ -11,7 +11,6 @@ use pocketmine\utils\TextFormat;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
 use NhanAZ\ProfanityFilter\VersionInfo;
-use NhanAZ\ProfanityFilter\commands\ProfanityCommand;
 use function is_dir;
 use function mkdir;
 use function is_file;
@@ -34,12 +33,12 @@ class ProfanityFilter extends PluginBase {
 	/**
 	 * @var Config $config
 	 */
-	private Config $config;
+	protected Config $config;
 
 	/**
 	 * @var Config $profanities
 	 */
-	private Config $profanities;
+	protected Config $profanities;
 
 	/**
 	 * @var Language $language
@@ -93,6 +92,29 @@ class ProfanityFilter extends PluginBase {
 		self::setInstance($this);
 	}
 
+	/**
+	 * initResource
+	 *
+	 * @return void
+	 */
+	private function initResource(): void {
+		$this->saveDefaultConfig();
+		$this->config = $this->getConfig();
+		$this->saveResource("profanities.yml");
+		$this->profanities = new Config($this->getDataFolder() . "profanities.yml", Config::YAML);
+	}
+
+	/**
+	 * checkVersion
+	 *
+	 * @return void
+	 */
+	private function checkVersion(): void {
+		if (VersionInfo::IS_DEVELOPMENT_BUILD) { /* @phpstan-ignore-line (If condition is always true.) */
+			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
+			$this->getLogger()->warning($isDevelopmentBuild);
+		}
+	}
 
 	/**
 	 * onEnable
@@ -101,19 +123,9 @@ class ProfanityFilter extends PluginBase {
 	 */
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-
-		$this->saveDefaultConfig();
-		$this->config = $this->getConfig();
-
-		$this->saveResource("profanities.yml");
-		$this->profanities = new Config($this->getDataFolder() . "profanities.yml", Config::YAML);
-
+		$this->initResource();
 		$this->initLanguageFiles(strval($this->config->get("language", "eng")), $this->languages);
-
-		if (VersionInfo::IS_DEVELOPMENT_BUILD) { /* @phpstan-ignore-line (If condition is always true.) */
-			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
-			$this->getLogger()->warning($isDevelopmentBuild);
-		}
+		$this->checkVersion();
 	}
 
 	/**
