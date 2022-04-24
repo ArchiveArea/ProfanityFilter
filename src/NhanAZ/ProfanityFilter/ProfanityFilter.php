@@ -114,8 +114,6 @@ class ProfanityFilter extends PluginBase {
 			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
 			$this->getLogger()->warning($isDevelopmentBuild);
 		}
-
-		$this->getServer()->getCommandMap()->register("profanity", new ProfanityCommand($this, "profanity", "Profanity Command"));
 	}
 
 	/**
