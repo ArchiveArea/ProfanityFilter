@@ -229,7 +229,10 @@ class ProfanityFilter extends PluginBase {
 		};
 		$array = $profanities;
 		$search = $profanities;
-		/** @var array $array */
+		/**
+		 * @phpstan-ignore-next-line
+		 * Parameter #3 $subject of function str_replace expects array|string, mixed given.
+		 */
 		$replace = array_map($callback, $array);
 		$subject = strtolower($msg);
 		// TODO: Use preg_replace instead of str_replace (Help Wanted)
