@@ -110,7 +110,7 @@ class ProfanityFilter extends PluginBase {
 	 * @return void
 	 */
 	private function checkVersion(): void {
-		if (VersionInfo::IS_DEVELOPMENT_BUILD === true) {
+		if (VersionInfo::IS_DEVELOPMENT_BUILD) { /* @phpstan-ignore-line (If condition is always true.) */
 			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
 			$this->getLogger()->warning($isDevelopmentBuild);
 		}
