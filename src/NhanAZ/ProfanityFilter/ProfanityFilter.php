@@ -229,7 +229,7 @@ class ProfanityFilter extends PluginBase {
 		};
 		$array = $profanities;
 		$search = $profanities;
-		$replace = array_map(strval($subject), (array)$array);
+		$replace = array_map(strval($callback), (array)$array);
 		$subject = strtolower($msg);
 		// TODO: Use preg_replace instead of str_replace (Help Wanted)
 		$filteredMsg = str_replace((array)$search, $replace, $subject);
