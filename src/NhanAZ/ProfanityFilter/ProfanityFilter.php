@@ -188,7 +188,7 @@ class ProfanityFilter extends PluginBase {
 		 * Argument of an invalid type mixed supplied for foreach, only iterables are supported.
 		 */
 		foreach ($profanities as $profanitie) {
-			$filterCount = sizeof($profanities);
+			$filterCount = sizeof((array)$profanities);
 			for($i=0; $i < $filterCount; $i++) {
 				$condition = preg_match('/' . $profanities[$i] . '/iu', $msg) > 0;
 				if($condition) {
