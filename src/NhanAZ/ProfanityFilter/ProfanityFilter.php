@@ -21,6 +21,7 @@ use function mb_strlen;
 use function str_replace;
 use function array_map;
 use function strtolower;
+use function preg_match;
 
 /**
  * Class ProfanityFilter
@@ -187,7 +188,8 @@ class ProfanityFilter extends PluginBase {
 		 * Argument of an invalid type mixed supplied for foreach, only iterables are supported.
 		 */
 		foreach ($profanities as $profanitie) {
-			if ((bool)strrchr(strtolower($msg), strval($profanitie))) {
+			$pattern = '/\b'.$profanitie.'\b/i';
+            if (preg_match($pattern, $msg) > 0) {
 				return true;
 			}
 		}
