@@ -182,15 +182,11 @@ class ProfanityFilter extends PluginBase {
 	 * @return bool
 	 */
 	public function containsProfanity(string $msg): bool {
-		$profanities = $this->getProfanities();
-		/**
-		 * @phpstan-ignore-next-line
-		 * Argument of an invalid type mixed supplied for foreach, only iterables are supported.
-		 */
+		$profanities = (array)$this->getProfanities();
 		foreach ($profanities as $profanitie) {
 			$filterCount = sizeof((array)$profanities);
 			for($i=0; $i < $filterCount; $i++) {
-				$condition = preg_match('/' . strval($profanities[intval($i)]) . '/iu', $msg) > 0;
+				$condition = preg_match('/' . $profanities[$i] . '/iu', $msg) > 0;
 				if($condition) {
 					return true;
 				}
