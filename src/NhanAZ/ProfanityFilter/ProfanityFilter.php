@@ -217,21 +217,14 @@ class ProfanityFilter extends PluginBase {
 	 * @return string
 	 */
 	public function handleMessage(string $msg): string {
-		$profanities = $this->getProfanities();
-		$callback = function (string $profanities): string {
-			$character = $this->getCharacterReplaced();
-			$search = $profanities;
-			$replace = str_repeat(strval($character), mb_strlen($profanities, "utf8"));
-			$subject = $profanities;
-			$profanities = str_replace($search, $replace, $subject);
-			return $profanities;
-		};
-		$array = $profanities;
-		$search = $profanities;
-		$replace = array_map(strval($callback), (array)$array);
-		$subject = strtolower($msg);
-		// TODO: Use preg_replace instead of str_replace (Help Wanted)
-		$filteredMsg = str_replace((array)$search, $replace, $subject);
+		$profanities = (array)$this->getProfanities();
+		$filterCount = sizeof($profanities);
+		$filteredMsg = $msg;
+		for ($i = 0; $i < $filterCount; $i++) {
+			$pattern = '/' . $profanities[$i] . '/iu';
+			$filter = str_repeat('*',strlen($profanities[$i]));
+			$filteredMsg = preg_replace($pattern, $filter, $filteredMsg);
+		}
 		return $filteredMsg;
 	}
 
