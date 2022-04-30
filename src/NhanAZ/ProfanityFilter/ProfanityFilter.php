@@ -222,7 +222,7 @@ class ProfanityFilter extends PluginBase {
 		$filteredMsg = $msg;
 		for ($i = 0; $i < $filterCount; $i++) {
 			$pattern = '/' . $profanities[$i] . '/iu';
-			$filter = str_repeat('*',strlen($profanities[$i]));
+			$filter = str_repeat('*', strlen($profanities[$i]));
 			$filteredMsg = preg_replace($pattern, $filter, $filteredMsg);
 		}
 		return $filteredMsg;
