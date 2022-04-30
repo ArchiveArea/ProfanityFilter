@@ -183,13 +183,11 @@ class ProfanityFilter extends PluginBase {
 	 */
 	public function containsProfanity(string $msg): bool {
 		$profanities = (array)$this->getProfanities();
-		foreach ($profanities as $profanitie) {
-			$filterCount = sizeof($profanities);
-			for ($i = 0; $i < $filterCount; $i++) {
-				$condition = preg_match('/' . $profanities[$i] . '/iu', $msg) > 0;
-				if ($condition) {
-					return true;
-				}
+		$filterCount = sizeof($profanities);
+		for ($i = 0; $i < $filterCount; $i++) {
+			$condition = preg_match('/' . $profanities[$i] . '/iu', $msg) > 0;
+			if ($condition) {
+				return true;
 			}
 		}
 		return false;
