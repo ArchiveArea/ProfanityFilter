@@ -190,8 +190,7 @@ class ProfanityFilter extends PluginBase {
 		foreach ($profanities as $profanitie) {
 			$filterCount = sizeof((array)$profanities);
 			for($i=0; $i < $filterCount; $i++) {
-				$pattern = '/' . $profanities[$i] . '/iu';
-				$condition = preg_match($pattern, $msg) > 0;
+				$condition = preg_match('/' . strval($profanities[intval($i)]) . '/iu', $msg) > 0;
 				if($condition) {
 					return true;
 				}
