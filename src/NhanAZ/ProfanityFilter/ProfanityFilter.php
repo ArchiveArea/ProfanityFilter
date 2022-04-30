@@ -21,6 +21,7 @@ use function mb_strlen;
 use function str_replace;
 use function array_map;
 use function strtolower;
+use function preg_match;
 
 /**
  * Class ProfanityFilter
@@ -181,14 +182,14 @@ class ProfanityFilter extends PluginBase {
 	 * @return bool
 	 */
 	public function containsProfanity(string $msg): bool {
-		$profanities = $this->getProfanities();
-		/**
-		 * @phpstan-ignore-next-line
-		 * Argument of an invalid type mixed supplied for foreach, only iterables are supported.
-		 */
+		$profanities = (array)$this->getProfanities();
 		foreach ($profanities as $profanitie) {
-			if ((bool)strrchr(strtolower($msg), strval($profanitie))) {
-				return true;
+			$filterCount = sizeof($profanities);
+			for ($i=0; $i < $filterCount; $i++) {
+				$condition = preg_match('/' . $profanities[$i] . '/iu', $msg) > 0;
+				if ($condition) {
+					return true;
+				}
 			}
 		}
 		return false;
