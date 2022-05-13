@@ -20,3 +20,10 @@
 | ------------- | ----------- |
 | <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" height="64" width="64" align="left"> | <a href="https://www.flaticon.com/free-icons/profanity">Profanity icons created by Freepik - Flaticon</a> |
 | <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/PhpStorm_icon.png" height="64" width="64" align="left"> | <a href="https://jb.gg/OpenSourceSupport">IDE for this project is supported by Jetbrains</a> |
+
+## Contributors
+<a href="https://github.com/nhanaz-pm-pl/ProfanityFilter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nhanaz-pm-pl/ProfanityFilter" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
