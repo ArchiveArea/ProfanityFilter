@@ -27,7 +27,6 @@ use function strval;
  * @package NhanAZ\ProfanityFilter
  */
 class ProfanityFilter extends PluginBase {
-
 	use SingletonTrait;
 
 	protected Config $config;

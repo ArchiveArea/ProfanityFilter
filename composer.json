@@ -40,7 +40,7 @@
         "phpstan/phpstan-strict-rules": "1.1.0",
         "phpstan/extension-installer": "1.1.0",
         "pocketmine/pocketmine-mp": "4.3.1",
-        "cortexpe/commando": "dev-PM4"
+        "friendsofphp/php-cs-fixer": "^3.8"
     },
     "autoload": {
         "psr-0": {

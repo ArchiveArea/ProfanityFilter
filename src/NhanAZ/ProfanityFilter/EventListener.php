@@ -12,7 +12,6 @@ use pocketmine\event\player\PlayerChatEvent;
  * @package NhanAZ\ProfanityFilter
  */
 class EventListener implements Listener {
-
 	private ProfanityFilter $profanityFilter;
 
 	/**
