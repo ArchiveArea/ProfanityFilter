@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace NhanAZ\ProfanityFilter;
 
 use pocketmine\event\Listener;
@@ -11,15 +13,10 @@ use pocketmine\event\player\PlayerChatEvent;
  */
 class EventListener implements Listener {
 
-	/**
-	 * @var ProfanityFilter $profanityFilter
-	 */
 	private ProfanityFilter $profanityFilter;
 
 	/**
 	 * __construct
-	 *
-	 * @param ProfanityFilter $profanityFilter
 	 */
 	public function __construct(ProfanityFilter $profanityFilter) {
 		$this->profanityFilter = $profanityFilter;
@@ -27,12 +24,8 @@ class EventListener implements Listener {
 
 	/**
 	 * onPlayerChat
-	 *
-	 * @param PlayerChatEvent $event
-	 *
-	 * @return void
 	 */
-	public function onPlayerChat(PlayerChatEvent $event): void {
+	public function onPlayerChat(PlayerChatEvent $event) : void {
 		$msg = $event->getMessage();
 		$player = $event->getPlayer();
 		if (!$player->hasPermission("profanityfilter.bypass")) {
