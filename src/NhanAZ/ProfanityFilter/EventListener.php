@@ -14,16 +14,10 @@ use pocketmine\event\player\PlayerChatEvent;
 class EventListener implements Listener {
 	private ProfanityFilter $profanityFilter;
 
-	/**
-	 * __construct
-	 */
 	public function __construct(ProfanityFilter $profanityFilter) {
 		$this->profanityFilter = $profanityFilter;
 	}
 
-	/**
-	 * onPlayerChat
-	 */
 	public function onPlayerChat(PlayerChatEvent $event) : void {
 		$msg = $event->getMessage();
 		$player = $event->getPlayer();

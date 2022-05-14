@@ -41,9 +41,6 @@ class ProfanityFilter extends PluginBase {
 		"vie"
 	];
 
-	/**
-	 * getLanguage
-	 */
 	public static function getLanguage() : Language {
 		return self::$language;
 	}
@@ -66,16 +63,10 @@ class ProfanityFilter extends PluginBase {
 		self::$language = new Language($lang, $path);
 	}
 
-	/**
-	 * onLoad
-	 */
 	protected function onLoad() : void {
 		self::setInstance($this);
 	}
 
-	/**
-	 * initResource
-	 */
 	private function initResource() : void {
 		$this->saveDefaultConfig();
 		$this->config = $this->getConfig();
@@ -83,9 +74,6 @@ class ProfanityFilter extends PluginBase {
 		$this->profanities = new Config($this->getDataFolder() . "profanities.yml", Config::YAML);
 	}
 
-	/**
-	 * checkVersion
-	 */
 	private function checkVersion() : void {
 		if (VersionInfo::IS_DEVELOPMENT_BUILD) { /* @phpstan-ignore-line (If condition is always true.) */
 			$isDevelopmentBuild = ProfanityFilter::getLanguage()->translateString("is.development.build");
@@ -93,9 +81,6 @@ class ProfanityFilter extends PluginBase {
 		}
 	}
 
-	/**
-	 * onEnable
-	 */
 	protected function onEnable() : void {
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 		$this->initResource();
@@ -103,44 +88,26 @@ class ProfanityFilter extends PluginBase {
 		$this->checkVersion();
 	}
 
-	/**
-	 * getPrefix
-	 */
 	public function getPrefix() : string {
 		return strval($this->config->get("prefix", "&f[&cProfanityFilter&f]&r "));
 	}
 
-	/**
-	 * getProfanities
-	 */
 	public function getProfanities() : mixed {
 		return $this->profanities->get("profanities", ["wtf", "đụ"]);
 	}
 
-	/**
-	 * getWarningMode
-	 */
 	public function getWarningMode() : bool {
 		return (bool) $this->config->get("warningMode", true);
 	}
 
-	/**
-	 * getCharacterReplaced
-	 */
 	public function getCharacterReplaced() : string {
 		return strval($this->config->get("characterReplaced", "*"));
 	}
 
-	/**
-	 * getShowProfanity
-	 */
 	public function getShowProfanity() : bool {
 		return (bool) $this->config->get("showProfanity", true);
 	}
 
-	/**
-	 * containsProfanity
-	 */
 	public function containsProfanity(string $msg) : bool {
 		$profanities = (array) $this->getProfanities();
 		$filterCount = sizeof($profanities);
@@ -165,9 +132,6 @@ class ProfanityFilter extends PluginBase {
 		}
 	}
 
-	/**
-	 * handleMessage
-	 */
 	public function handleMessage(string $msg) : string {
 		$profanities = $this->getProfanities();
 		$callback = function (string $profanities) : string {
