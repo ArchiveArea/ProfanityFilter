@@ -16,7 +16,7 @@ final class VersionInfo {
 public const PLUGIN_VERSION = "1.0.0";
 
 	/**
-	 * @var string  CONFIG_VERSION
+	 * @var string CONFIG_VERSION
 	 */
 	public const CONFIG_VERSION = "1.0.0";
 
