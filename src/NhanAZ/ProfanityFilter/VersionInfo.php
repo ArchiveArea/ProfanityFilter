@@ -8,13 +8,12 @@ namespace NhanAZ\ProfanityFilter;
  * Class VersionInfo
  * @package NhanAZ\ProfanityFilter
  */
-final class VersionInfo
-{
+final class VersionInfo {
 
 	/**
 	 * @var string PLUGIN_VERSION
 	 */
-public const PLUGIN_VERSION = "1.0.0";
+	public const PLUGIN_VERSION = "1.0.0";
 
 	/**
 	 * @var string  CONFIG_VERSION
