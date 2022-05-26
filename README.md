@@ -10,7 +10,7 @@
 -->
 [![Lint](https://poggit.pmmp.io/ci.shield/nhanaz-pm-pl/ProfanityFilter/ProfanityFilter)](https://poggit.pmmp.io/ci/nhanaz-pm-pl/ProfanityFilter/ProfanityFilter)
 [![CI](https://github.com/nhanaz-pm-pl/ProfanityFilter/actions/workflows/phpstan.yml/badge.svg)](https://github.com/nhanaz-pm-pl/ProfanityFilter/actions/workflowsphpstan.yml)
-[![Discord](https://img.shields.io/discord/929911970457583626.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/x4CrYtmWh)
+[![Discord](https://img.shields.io/discord/929911970457583626.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/x4CrYtmWhY)
 
 **Powerful Profanity Filter Plugin For PocketMine-MP Servers**
 
