@@ -16,11 +16,10 @@
 
 # Credits
 
-| Logo  | Description |
-| ------------- | ----------- |
-| <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" height="64" width="64" align="left"> | <a href="https://www.flaticon.com/free-icons/profanity">Profanity icons created by Freepik - Flaticon</a> |
-| <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/PhpStorm_icon.png" height="64" width="64" align="left"> | <a href="https://jb.gg/OpenSourceSupport">IDE for this project is supported by Jetbrains</a> |
-| <img src="https://avatars.githubusercontent.com/ml/1377?s=82&v=4" height="64" width="64" align="left"> | <a href="https://restyled.io/">App supports auto-reformatting of pull requests</a> |
+- [Flaticon](https://www.flaticon.com/)
+- [Jetbrains](https://www.jetbrains.com/)
+- [Restyled](https://restyled.io/)
+
 
 ## Contributors
 <a href="https://github.com/nhanaz-pm-pl/ProfanityFilter/graphs/contributors">
