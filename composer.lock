@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7192dc630c05541d34108482f4cb6c8",
+    "content-hash": "38311e97ff713806b65aaa9e149ae782",
     "packages": [
         {
             "name": "adhocore/json-comment",
@@ -727,16 +727,16 @@
         },
         {
             "name": "pocketmine/pocketmine-mp",
-            "version": "4.5.0",
+            "version": "4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmmp/PocketMine-MP.git",
-                "reference": "64a8c462f933b2e4ac29b918df56113c7767f0be"
+                "reference": "d641812c52ef278e714e9d72c5277733b0b2fda9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmmp/PocketMine-MP/zipball/64a8c462f933b2e4ac29b918df56113c7767f0be",
-                "reference": "64a8c462f933b2e4ac29b918df56113c7767f0be",
+                "url": "https://api.github.com/repos/pmmp/PocketMine-MP/zipball/d641812c52ef278e714e9d72c5277733b0b2fda9",
+                "reference": "d641812c52ef278e714e9d72c5277733b0b2fda9",
                 "shasum": ""
             },
             "require": {
@@ -810,7 +810,7 @@
             "homepage": "https://pmmp.io",
             "support": {
                 "issues": "https://github.com/pmmp/PocketMine-MP/issues",
-                "source": "https://github.com/pmmp/PocketMine-MP/tree/4.5.0"
+                "source": "https://github.com/pmmp/PocketMine-MP/tree/4.5.1"
             },
             "funding": [
                 {
@@ -822,7 +822,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-06-07T16:57:39+00:00"
+            "time": "2022-06-08T01:50:33+00:00"
         },
         {
             "name": "pocketmine/raklib",
