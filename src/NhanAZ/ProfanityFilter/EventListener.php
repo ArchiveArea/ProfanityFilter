@@ -7,10 +7,6 @@ namespace NhanAZ\ProfanityFilter;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 
-/**
- * Class EventListener
- * @package NhanAZ\ProfanityFilter
- */
 class EventListener implements Listener {
 	private ProfanityFilter $profanityFilter;
 
@@ -18,7 +14,7 @@ class EventListener implements Listener {
 		$this->profanityFilter = $profanityFilter;
 	}
 
-	public function onPlayerChat(PlayerChatEvent $event) : void {
+	public function onPlayerChat(PlayerChatEvent $event): void {
 		$msg = $event->getMessage();
 		$player = $event->getPlayer();
 		if (!$player->hasPermission("profanityfilter.bypass")) {

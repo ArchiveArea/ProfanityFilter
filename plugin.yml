@@ -7,25 +7,8 @@ api: 4.0.0
 website: github.com/nhanaz-pm-pl/ProfanityFilter
 description: Powerful Profanity Filter Plugin For PocketMine-MP Servers
 author: NhanAZ
-extensions:
-  core: ">=8.0"
 
 permissions:
-  profanityfilter:
-    description: "Profanity Command"
-    default: op
-  profanityfilter.add:
-    description: "Add Profanity"
-    default: op
-    profanityfilter.remove:
-    description: "Remove Profanity"
-    default: op
-    profanityfilter.list:
-    description: "List Profanity"
-    default: op
-    profanityfilter.setting:
-    description: "Setting Profanity"
-    default: op
   profanityfilter.bypass:
     description: "Bypass plugin's filter"
     default: op
