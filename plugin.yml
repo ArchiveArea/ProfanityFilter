@@ -2,6 +2,5 @@
 name: ProfanityFilter
 version: 0.0.1
 main: NhanAZ\ProfanityFilter\Main
-api: 4.5.2
-src-namespace-prefix: NhanAZ\ProfanityFilter
+api: 4.0.0
 ...
